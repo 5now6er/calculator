@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script lang="javascript">
+            function calc(action)
+            {
+              x= parseInt(document.getElementById("x").value);
+              y=  parseInt(document.getElementById("y").value);
+              z=0;
+              if(action=="+")
+              z=x+y;
+              else if(action=="-")
+              z=x-y;
+              else if(action=="x")
+              z=x*y;
+              else if(action=="/")
+              z=x/y;
+              
+              
+              document.getElementById("result").value=z;
+                       
+             
+            }
+
+            function doSome()
+              {
+                document.getElementById("result").value="tum kchh likh rahay ho kia";
+              }
+            
+
+        </script>
+    </head>
+
+<body>
+    <input type="text" id="x" onblur="doSome()" >
+    <input type="text" id="y" >
+    <button onclick='calc("+")'> + </button>
+    <button onclick="calc('-')"> - </button>
+    <button onclick="calc('x')"> x </button>
+    <button onclick="calc('/')"> / </button>
+    <input type="text" id="result" value="0">
+</body>
+
+</html>

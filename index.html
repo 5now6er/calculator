@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script lang="javascript">
+
+function add()
+{           
+
+
+   alert(parseInt(document.getElementById("one").value)+parseInt(document.getElementById("two").value));
+}
+function sub()
+{
+
+    alert(parseInt (document.getElementById("one").value)
+    -parseInt(document.getElementById("two").value));
+}
+function multiply()
+
+{
+    alert(parseInt (document.getElementById("one").value)
+    *parseInt(document.getElementById("two").value)); 
+}
+
+function divide(x,y)
+{
+ x=(parseInt (document.getElementById("one").value));
+ y= (parseInt(document.getElementById("two").value));
+ z=(x/y);
+//  alert(z);
+document.getElementById("result").value=z;
+
+}
+        </script>
+    </head>
+
+<body>
+    
+    <input type="text" id="one" placeholder="type number one">
+    <input type="text" id="two" placeholder="type number two">
+    
+    
+    <button onclick="add()" > +  </button>
+    <button onclick="sub()" > -  </button>
+    <button onclick="multiply()" > x  </button>
+    <button onclick="divide()" > %  </button>
+
+    <input type="text" id="result" readonly>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hvvvhg</title>
+    <!-----------------javascript------------------->
+<script lang="javascript">
+
+function calculater(){
+    screen= document.getElementById('screen');
+buttons= document.querySelectorAll('button');}
+
+//console.log(buttons);
+screenValue='';
+exactValue='';
+buttontext='';
+numberOne='';
+numberTwo='';
+
+
+for(item of buttons){
+    item.addEventListener('click',(e)=>{
+       
+        exactValue=e.target.innerText;
+       
+        if(exactValue=="+")
+        {
+        
+        if(buttontext=='')
+        {
+            alert("Jatt ja putt chaa karyaan!");
+        }
+            numberOne=buttontext;
+        console.log(numberOne);
+        screenValue=numberOne;
+        screen.value =screenValue;
+        buttontext='';
+                     }
+        else if(exactValue=="=")
+        {
+            //alert("I am plus");
+        
+         numberTwo=buttontext;
+        console.log(numberTwo);
+        total=parseInt(numberOne)+parseInt(numberTwo);
+        screen.value=total;
+        buttontext='';
+        }
+        else if(exactValue=="c")
+        {
+            buttontext='';
+            screen.value='';
+            exactValue='';
+            numberOne='';
+            numberTwo='';
+        }
+        
+        else
+        {
+            buttontext =buttontext+exactValue;
+           // alert("pehle wala chala");
+           screen.value =buttontext;
+    
+    }
+     
+
+
+
+
+
+</script>
+
+
+
+<!--------------------style------------------->
+<style>
+.container
+{
+    text-align: center;
+    margin-top: 23px;
+}
+table
+{
+    margin: auto;
+}
+input
+{
+    border-radius: 21px;
+    border: 5px solid #050e05;
+    font-size: 34px;
+}
+button
+{
+     background: #868886;   
+    font-size: 43px ;
+    width: 102px;
+    height: 58px;
+    border-radius:  21px;
+}
+
+button:hover{background-color:orange;}
+
+button:focus{background-color:red;}
+
+.calculator
+{
+    background-color: #f698f3;
+    padding: 30px; 
+    border-radius: 53px;
+display: inline-block;
+
+}
+
+</style>
+
+
+
+
+</head>
+<!---------------here the body starts--------------->
+<body onload="calculater()">
+    <div class="container">
+<h1>calculater</h1>
+<div class="calculator">
+    <input type="text" name="screen" id="screen">
+<table>
+ <tr>
+ <td><button value="7">7</button></td>
+ <td><button>8</button></td> 
+ <td><button>9</button></td>
+ <td><button>x</button></td>
+ </tr>
+ <tr>
+    <td><button>4</button></td>
+    <td><button>5</button></td> 
+    <td><button>6</button></td>
+    <td><button>+</button></td>
+    </tr>
+    <tr>
+        <td><button>1</button></td>
+        <td><button>2</button></td> 
+        <td><button>3</button></td>
+        <td><button>-</button></td>
+        </tr>
+        <tr>
+            <td><button>c</button></td>
+            <td><button>0</button></td> 
+            <td><button>=</button></td>
+            <td><button>/</button></td>
+            </tr>
+
+</div>
+
+
+</table>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
